@@ -1,5 +1,5 @@
 # roshambo
-A fun old app. Rock, paper, scissors :)
+A fun old game. Rock, paper, scissors :)
 
 This is a challenge project from my Udacity Nanodegree program.
 
