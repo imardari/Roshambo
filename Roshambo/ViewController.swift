@@ -16,7 +16,7 @@ class ViewController: UIViewController {
     
     func randomGameValue() -> String {
         let randomValue = 1 + arc4random() % 3
-            print(randomValue)
+        
         var result: String!
         
         switch randomValue {
