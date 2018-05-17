@@ -34,11 +34,13 @@ class ViewController: UIViewController {
     
     @IBAction func playRock(_ sender: Any) {
         // Present the other VC programatically
-        var controller: ResultViewController
-        controller = storyboard?.instantiateViewController(withIdentifier: "ResultViewController") as! ResultViewController
-        controller.yourValue = "Rock"
-        controller.computerValue = randomGameValue()
-        present(controller, animated: true, completion: nil)
+        if let controller = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ResultViewController") as? ResultViewController {
+            if let navigator = navigationController {
+                controller.yourValue = "Rock"
+                controller.computerValue = randomGameValue()
+                navigator.pushViewController(controller, animated: true)
+            }
+        }
     }
     
     @IBAction func playPaper(_ sender: Any) {
